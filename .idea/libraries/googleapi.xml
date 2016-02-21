@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="googleapi">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jMIR_2_4_developer/Third_Party_Jars/googleapi.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

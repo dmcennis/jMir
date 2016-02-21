@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jMIR_2_4_developer/ACE/ACE.iml" filepath="$PROJECT_DIR$/jMIR_2_4_developer/ACE/ACE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jMIR_2_4_developer/UtilityClasses/UtilityClasses.iml" filepath="$PROJECT_DIR$/jMIR_2_4_developer/UtilityClasses/UtilityClasses.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jMIR_2_4_developer/jAudio/jAudio.iml" filepath="$PROJECT_DIR$/jMIR_2_4_developer/jAudio/jAudio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jMIR_2_4_developer/jLyrics/jLyrics.iml" filepath="$PROJECT_DIR$/jMIR_2_4_developer/jLyrics/jLyrics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jMIR_2_4_developer/jMIRUtilities/jMIRUtilities.iml" filepath="$PROJECT_DIR$/jMIR_2_4_developer/jMIRUtilities/jMIRUtilities.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jMir.iml" filepath="$PROJECT_DIR$/jMir.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jMIR_2_4_developer/jMusicMetaManager/jMusicMetaManager.iml" filepath="$PROJECT_DIR$/jMIR_2_4_developer/jMusicMetaManager/jMusicMetaManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jMIR_2_4_developer/jSongMiner/jSongMiner.iml" filepath="$PROJECT_DIR$/jMIR_2_4_developer/jSongMiner/jSongMiner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jMIR_2_4_developer/jSymbolic/jSymbolic.iml" filepath="$PROJECT_DIR$/jMIR_2_4_developer/jSymbolic/jSymbolic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jMIR_2_4_developer/jWebMiner2/jWebMiner2.iml" filepath="$PROJECT_DIR$/jMIR_2_4_developer/jWebMiner2/jWebMiner2.iml" />
+    </modules>
+  </component>
+</project>
