@@ -1,0 +1,6 @@
+[submodule "jMIR_2_4_developer/multihelp"]
+	path = jMIR_2_4_developer/multihelp
+	url = https://github.com/dmcennis/multihelp
+[submodule "jMIR_2_4_developer/jAudioGIT"]
+	path = jMIR_2_4_developer/jAudioGIT
+	url = https://github.com/dmcennis/jAudioGIT
