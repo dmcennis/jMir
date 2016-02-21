@@ -27,7 +27,7 @@ import ace.datatypes.DataSet;
  * @author Cory McKay (ACE 1.x) and Jessica Thompson (ACE 2.x)
  */
 public class ParseDataSetFileHandler
-     extends mckay.utilities.xml.ParseFileHandler
+     extends org.jaudio.xml.ParseFileHandler
 {
      /* FIELDS ****************************************************************/
 

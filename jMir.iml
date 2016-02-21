@@ -7,7 +7,17 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="resolver" level="application" />
+    <orderEntry type="module" module-name="ACE" />
+    <orderEntry type="module" module-name="jAudio" />
+    <orderEntry type="module" module-name="jAudioGIT" />
+    <orderEntry type="module" module-name="jLyrics" />
+    <orderEntry type="module" module-name="jMIRUtilities" />
+    <orderEntry type="module" module-name="jMusicMetaManager" />
+    <orderEntry type="module" module-name="jSongMiner" />
+    <orderEntry type="module" module-name="jSymbolic" />
+    <orderEntry type="module" module-name="jWebMiner2" />
+    <orderEntry type="module" module-name="multihelp-git" />
+    <orderEntry type="module" module-name="UtilityClasses" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">
     <option name="_basePreferences">

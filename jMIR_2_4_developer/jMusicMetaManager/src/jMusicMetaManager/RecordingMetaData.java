@@ -18,7 +18,6 @@ import java.util.Vector;
 import javax.swing.ProgressMonitor;
 import mckay.utilities.xml.*;
 import de.vdheide.mp3.*;
-import org.apache.xerces.parsers.SAXParser;
 import org.xml.sax.XMLReader;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
@@ -482,15 +481,13 @@ public class RecordingMetaData
 
           // Prepare the XML parser with the validation feature on and the error
           // handler set to throw exceptions on all warnings and errors
-          XMLReader reader = new SAXParser();
-          reader.setFeature("http://xml.org/sax/features/validation", true);
-          reader.setErrorHandler(new ParsingXMLErrorHandler());
+          javax.xml.parsers.SAXParser reader = javax.xml.parsers.SAXParserFactory.newInstance().newSAXParser();
+          reader.setProperty("http://xml.org/sax/features/validation", true);
           ParseiTunesXMLFileHandler handler = new ParseiTunesXMLFileHandler();
-          reader.setContentHandler(handler);
-          
+
           // Parse the XML file and throw an excpetion if necessary
           try
-          {reader.parse(file.getAbsolutePath());}
+          {reader.parse(file.getAbsolutePath(),handler);}
           catch (SAXParseException e) // throw an exception if the file is not a valid XML file
           {
                throw new Exception("The " + file.getAbsolutePath() + " file is not a valid XML file.\n\n" +

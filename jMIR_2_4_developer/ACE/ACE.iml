@@ -10,7 +10,6 @@
     <orderEntry type="library" name="junit" level="application" />
     <orderEntry type="library" name="weka" level="application" />
     <orderEntry type="module" module-name="UtilityClasses" />
-    <orderEntry type="library" name="resolver" level="application" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">
     <option name="_basePreferences">

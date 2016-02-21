@@ -27,7 +27,7 @@ import java.util.LinkedList;
  * @author Cory McKay (ACE 1.x) and Jessica Thompson (ACE 2.x)
  */
 public class ParseACEProjectFileHandler
-     extends mckay.utilities.xml.ParseFileHandler
+     extends org.jaudio.xml.ParseFileHandler
 {
      /* FIELDS ****************************************************************/
 

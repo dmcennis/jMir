@@ -10,7 +10,6 @@
     <orderEntry type="module" module-name="UtilityClasses" />
     <orderEntry type="library" name="java_mp3" level="project" />
     <orderEntry type="library" name="mp3plugin" level="project" />
-    <orderEntry type="library" name="resolver" level="application" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">
     <option name="_basePreferences">

@@ -27,7 +27,7 @@ import javax.swing.tree.DefaultTreeModel;
  * @author Cory McKay (ACE 1.x) and Jessica Thompson (ACE 2.x)
  */
 public class ParseTaxonomyFileHandler
-     extends mckay.utilities.xml.ParseFileHandler
+     extends org.jaudio.xml.ParseFileHandler
 {
      /* FIELDS ****************************************************************/
 

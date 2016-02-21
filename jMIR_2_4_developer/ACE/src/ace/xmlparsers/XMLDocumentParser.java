@@ -8,7 +8,6 @@
 
 package ace.xmlparsers;
 
-import org.apache.xerces.parsers.SAXParser;
 import org.xml.sax.XMLReader;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
@@ -70,10 +69,9 @@ public class XMLDocumentParser
 
           // Prepare the XML parser with the validation feature on and the error
           // handler set to throw exceptions on all warnings and errors
-          XMLReader reader = new SAXParser();
-          reader.setFeature("http://xml.org/sax/features/validation", true);
-          reader.setErrorHandler(new mckay.utilities.xml.ParsingXMLErrorHandler());
-          mckay.utilities.xml.ParseFileHandler handler;
+         javax.xml.parsers.SAXParser reader = javax.xml.parsers.SAXParserFactory.newInstance().newSAXParser();;
+         reader.setProperty("http://xml.org/sax/features/validation", true);
+         org.jaudio.xml.ParseFileHandler handler;
 
           // Choose the correct type handler based on the type of XML file
           if (document_type.equals("feature_vector_file"))
@@ -92,22 +90,20 @@ public class XMLDocumentParser
 
           // Parse the file so that the contents are available in the
           // parsed_file_contents field of the handler
-          reader.setContentHandler(handler);
-          try
-          {reader.parse(file_path);}
-          catch (SAXParseException e) // throw an exception if the file is not a valid XML file
-          {
-               throw new Exception("The " + file_path + " file is not a valid XML file.\n\nDetails of the problem: " + e.getMessage() +
-                    "\n\nThis error is likely in the region of line " + e.getLineNumber() + ".");
-          }
-          catch (SAXException e) // throw an exception if the file is not an XML file of the correct type
-          {
-               throw new Exception("The " + file_path + " file must be of type " + document_type + "." + e.getMessage());
-          }
-          catch (Exception e) // throw an exception if the file is not formatted properly
-          {
-               throw new Exception("The " + file_path + " file is not formatted properly.\n\nDetails of the problem: " + e.getMessage());
-          }
+         try {reader.parse(file_path,handler);}
+         catch (SAXParseException e) // throw an exception if the file is not a valid XML file
+         {
+             throw new Exception("The " + file_path + " file is not a valid XML file.\n\nDetails of the problem: " + e.getMessage() +
+                     "\n\nThis error is likely in the region of line " + e.getLineNumber() + ".");
+         }
+         catch (SAXException e) // throw an exception if the file is not an XML file of the correct type
+         {
+             throw new Exception("The " + file_path + " file must be of type " + document_type + ". " + e.getMessage());
+         }
+         catch (Exception e) // throw an exception if the file is not an XML file of the correct type
+         {
+             throw new Exception("The " + file_path + " file is not formatted properly.\n\nDetails of the problem: " + e.getMessage());
+         }
 
           // Return the contents of the parsed file
           return handler.parsed_file_contents;
@@ -146,18 +142,16 @@ public class XMLDocumentParser
 
         // Prepare the XML parser with the validation feature on and the error
         // handler set to throw exceptions on all warnings and errors
-        XMLReader reader = new SAXParser();
-        reader.setFeature("http://xml.org/sax/features/validation", true);
-        reader.setErrorHandler(new mckay.utilities.xml.ParsingXMLErrorHandler());
+        javax.xml.parsers.SAXParser reader = javax.xml.parsers.SAXParserFactory.newInstance().newSAXParser();
+        reader.setProperty("http://xml.org/sax/features/validation", true);
         UnknownFileHandler handler = new UnknownFileHandler();
 
         // Parse the file so that the contents are available in the
         // parsed_file_contents field of the handler
-        reader.setContentHandler(handler);
 
         try
         {
-            reader.parse(file_path);
+            reader.parse(file_path,handler);
         }
         catch (SAXException saxe)
         {

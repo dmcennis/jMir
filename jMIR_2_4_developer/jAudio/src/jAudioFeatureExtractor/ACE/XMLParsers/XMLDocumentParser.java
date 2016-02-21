@@ -6,7 +6,6 @@
 
 package jAudioFeatureExtractor.ACE.XMLParsers;
 
-import org.apache.xerces.parsers.SAXParser;
 import org.xml.sax.XMLReader;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
@@ -69,9 +68,8 @@ public class XMLDocumentParser
 
 		// Prepare the XML parser with the validation feature on and the error handler
 		// set to throw exceptions on all warnings and errors
-		XMLReader reader = new SAXParser();
-		reader.setFeature("http://xml.org/sax/features/validation", true);
-		reader.setErrorHandler(new ParsingXMLErrorHandler());
+		javax.xml.parsers.SAXParser reader = javax.xml.parsers.SAXParserFactory.newInstance().newSAXParser();
+		reader.setProperty("http://xml.org/sax/features/validation", true);
 		ParseFileHandler handler;
 
 		// Choose the correct type handler based on the type of XML file
@@ -94,8 +92,7 @@ public class XMLDocumentParser
 		else throw new Exception(new String("Invalid type of XML file specified. The XML file type " + document_type + " is not known."));
 
 		// Parse the file so that the contents are available in the parsed_file_contents field of the handler
-		reader.setContentHandler(handler);
-		try {reader.parse(file_path);}
+		try {reader.parse(file_path,handler);}
 		catch (SAXParseException e) // throw an exception if the file is not a valid XML file
 		{
 			throw new Exception("The " + file_path + " file is not a valid XML file.\n\nDetails of the problem: " + e.getMessage() +
