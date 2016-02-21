@@ -3,5 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jMIR_2_4_developer/jAudioGIT" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jMIR_2_4_developer/multihelp" vcs="Git" />
   </component>
 </project>
